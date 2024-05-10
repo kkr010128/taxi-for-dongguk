@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dongguk Taxi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dongguk-taxi.css" />
+  </head>
+  <body>
+    <div class="main_form" id="map" style="width:390px;height:844px;">
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7bf82169a53be4c855eca8f52959e97e&libraries=services,clusterer,drawing?autoload=false"></script>
+        <script type="text/javascript">
+            var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+            var options = { //지도를 생성할 때 필요한 기본 옵션
+                center: new kakao.maps.LatLng(35.860861, 129.195668), //지도의 중심좌표.
+                level: 5 //지도의 레벨(확대, 축소 정도)
+            };
+            var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        </script>
+        <div class="top_layout">
+            <div class="finder_form">
+                <div class="finder_switch">
+                    <input type="image" style="width: 21.4px; height: 18px;" src="https://media.discordapp.net/attachments/1175471776373952572/1191050423285579776/icon__repeat_.png?ex=65a40725&is=65919225&hm=3467fec78a5b40122a1a44cf5499ad0b049fc5c00878af470984db15937bbdb6&=&format=webp&quality=lossless&width=158&height=132">
+                </div>
+                <div class="start_point">
+                    <select style="width: 94px;" id="dropdown">
+                        <option disabled selected>출발지 선택</option>
+                        <option value="s1">[동국대] 택시정류장</option>
+                        <option value="s2">[동국대] 기숙사</option>
+                        <option value="s3">[석장동] 택시정류장</option>
+                        <option value="s4">[경주시] 연합기숙사</option>
+                        <option value="s5">[경주시] 예비군 훈련장</option>
+                        <option value="s6">[경주시] 시외버스터미널</option>
+                        <option value="s7">[신경주역] 택시정류장</option>
+                        <option value="s8">[황리단길] 첨성대,대릉원주차장</option>
+                        <option value="s9">[황리단길] 경주공고</option>
+                        <option value="s10">[황리단길] 중앙광장,공영주차장</option>
+                    </select>
+                </div>
+                <div class="middle_arrow">
+                    <input type="image" style="width: 16.5px; height: 9px;" src="https://media.discordapp.net/attachments/1175471776373952572/1191055958978351114/icon__arrow_right_.png?ex=65a40c4d&is=6591974d&hm=b6dc9294d231aa8a4ec4d08d089bad5906ff8c296371ee434b6f3c994c507023&=&format=webp&quality=lossless&width=122&height=66">
+                </div>
+                <div class="goal_point">
+                    <select style="width: 94px;" id="dropdown">
+                        <option disabled selected>도착지 선택</option>
+                        <option value="g1">[동국대] 택시정류장</option>
+                        <option value="g2">[동국대] 기숙사</option>
+                        <option value="g3">[석장동] 택시정류장</option>
+                        <option value="g4">[경주시] 연합기숙사</option>
+                        <option value="g5">[경주시] 예비군 훈련장</option>
+                        <option value="g6">[경주시] 시외버스터미널</option>
+                        <option value="g7">[신경주역] 택시정류장</option>
+                        <option value="g8">[황리단길] 첨성대,대릉원주차장</option>
+                        <option value="g9">[황리단길] 경주공고</option>
+                        <option value="g10">[황리단길] 중앙광장,공영주차장</option>
+                    </select>
+                </div>
+                <div class="finder_options">
+                    <input type="image" style="width: 24px; height: 18px;" src="https://media.discordapp.net/attachments/1175471776373952572/1191050422631284776/Group_44.png?ex=65a40725&is=65919225&hm=5e2c7565ebc6122a6ff435be9cd9890b1dd4bdcc4dcc4edabf994962bfa4697e&=&format=webp&quality=lossless&width=178&height=132">
+                </div>
+            </div>
+            <div class="search_button">
+                <input type="image" style="width: 19px; height: 19px; border-radius: 8px;" src="https://media.discordapp.net/attachments/1175471776373952572/1191050422916493363/icon__search_.png?ex=65a40725&is=65919225&hm=7b316366aca2f182c0871e9ecd2d978cef344c0bc8d7002acd8e5521e204005e&=&format=webp&quality=lossless&width=140&height=142">
+            </div>
+        </div>
+        <div class="middle_layout"></div>
+        <div class="bottom_layout">
+            <div class="blank_bottom"></div>
+            <div class="chat_button"></div>
+        </div>
+    </div>
+    <!-- <script src="./dongguk-taxi.js"></script> -->
+  </body>
+</html>

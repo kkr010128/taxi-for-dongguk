@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="./chattingStyle.css">
+</head>
+<body>
+<div class="chat_wrap">
+    <div class="header">
+        동행
+    </div>
+    <div class="chat">
+        <!-- <div class="enter_new">
+            <p>2020214597 김광래 님이 입장하셨습니다.</p>
+        </div> -->
+        <div class="previous_message">
+            <p>이전 메세지 보기</p>
+        </div>
+        <ul>
+            <!-- 동적 생성 -->
+        </ul>
+    </div>
+    <div class="input-div">
+        <textarea placeholder="채팅 메시지" id="message"></textarea>
+        <button type="button" id="send_message">전송</button>
+    </div>
+</div>
+    <!-- format -->
+    <!-- <div class="time-display">
+        <p class="current-time"></p>
+    </div> -->
+    <script src="./chatting.js" type="module"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        const Chat = (function(){
+            const myName = "2020211495_김석영";
+
+            // 스크롤 내리기
+            function scrollToBottom() {
+                const chatDiv = document.querySelector('.chat ul');
+                chatDiv.scrollTop = chatDiv.scrollHeight;
+            }
+
+            function createMessageTag(LR_className, senderName, message, time) {
+                // 형식 가져오기
+                let chatLi = $('div.chat.format ul li').clone();
+
+                // 값 채우기
+                chatLi.addClass(LR_className);
+                chatLi.find('.sender span').text(senderName);
+                chatLi.find('.message span').text(message);
+                chatLi.find('.time span').text(time);
+
+                return cetttthatLi;
+            }
+
+            // 메세지 태그 append 함수 수정
+            function appendMessageTag(LR_className, senderName, message, time) {
+                const chatLi = createMessageTag(LR_className, senderName, message, time);
+
+                $('div.chat:not(.format) ul').append(chatLi);
+
+                // 스크롤을 아래로 이동
+                scrollToBottom();
+            }
+
+            // init 함수
+            function init() {
+                // enter 키 이벤트
+                $(document).on('keydown', 'div.input-div textarea', function(e){
+                    if(e.keyCode == 13 && !e.shiftKey) {
+                        e.preventDefault();
+                        const message = $(this).val();
+
+                        // 메시지 전송
+                        sendMessage(message);
+                        // 입력창 clear
+                        clearTextarea();
+                    }
+                });
+
+                // 1초마다 실시간 시간 업데이트
+                setInterval(updateCurrentTime, 1000);
+            }
+
+            // 메세지 전송
+            function sendMessage(message) {
+                const currentTime = new Date();
+                const hours = currentTime.getHours().toString().padStart(2, '0');
+                const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                const timeString = `${hours}:${minutes}`;
+
+                // 서버에 전송하는 코드로 후에 대체
+                const data = {
+                    "senderName": "2020211495_김석영",
+                    "message": message,
+                    "time": timeString
+                };
+
+                // 통신하는 기능이 없으므로 여기서 receive
+                receive(data);
+            }
+
+            // 메세지 입력박스 내용 지우기
+            function clearTextarea() {
+                $('div.input-div textarea').val('');
+            }
+
+            // 메세지 수신
+            function receive(data) {
+                const LR = (data.senderName != myName)? "left" : "right";
+                appendMessageTag("right", data.senderName, data.message, data.time);
+            }
+
+            // 실시간 시간 표시 함수
+            function updateCurrentTime() {
+                const currentTime = new Date();
+                const hours = currentTime.getHours().toString().padStart(2, '0');
+                const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+
+                const timeString = `${hours}:${minutes}`;
+                $('.current-time').text(timeString);
+            }
+
+            return {
+                'init': init
+            };
+        })();
+
+        $(function(){
+            Chat.init();
+        });
+    </script> -->
+</body>

@@ -1,0 +1,158 @@
+body {
+    /* height: 100%;
+    overflow: hidden; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrap {
+    width: 100%;
+    height: 38vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.main_title{
+    width: 100%;
+    height: 80%;
+    font-size: 2em;
+    font-style: bold;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+}
+
+
+
+.wrap_t {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.wrap1 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #E38214;
+    border-radius: 12px;
+    bottom: 10%;
+}
+
+.wrap2 {
+    position: relative;
+    width: 95%;
+    height: 100%;
+    border-radius: 16px;
+    bottom: 23%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 9px rgb(171, 171, 171);
+}
+
+.user_profile {
+    position: relative;
+    display: flex;
+    width: 10em;
+    top: 1em;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    filter: drop-shadow(0px 0px 5px rgb(171, 171, 171))
+}
+
+.user_name {
+    position: relative;
+    display: flex;
+    left: 5em;
+    bottom: 2.2em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 12.5em;
+    margin: 0px;
+}
+.user_name p{
+    font-size: x-large;
+}
+
+hr {
+    position: relative;
+    width : 90%;
+    height : 0.1em;
+    top: 1.2em;
+    /* bottom: 1.8em; */
+    background-color : rgb(202, 202, 202, 1);
+    border : 0;
+  }
+  
+  .center-hr {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .setting_title {
+    position: relative;
+    color: #ADADAD;
+    font-family: Rubik;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 0em;
+    /* bottom: 2.2em; */
+    margin: auto;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .members{
+	align-items: center;
+	justify-content: center;
+    /* margin-top: 3em; */
+    margin-top: 2.5em;
+  }
+
+  .setting_detail1 {
+    position: relative;
+    color: #000000;
+    font-family: Rubik;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 1.4em;
+    /* margin-top: 2em; */
+    bottom: 2.2em;
+  }
+
+  #arrow {
+    float: right;
+    position: relative;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-right: 1.5em;
+  }
+
+  .bottom_info{
+    display: flex;
+    position: relative;
+	align-items: center;
+	justify-content: center;
+    color: #ADADAD;
+    font-size: 0.8em;
+    text-align : center;
+    bottom: 2.2em;
+  }

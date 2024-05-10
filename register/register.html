@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동행: 같이타요</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./registerStyle.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("my4l42CtKwG_KuOVH");
+        })();
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="register">
+            <div class="register_title">
+                <h2>회원가입</h2>
+            </div>
+            <div class="register_margin">
+                <div class="register_error">
+                    <p id="error_message"></p>
+                </div>
+            </div>
+            <div class="register_email">
+                <input type="text" id="email" placeholder="동국 이메일 주소 입력" required autofocus> 
+                <button id="send" type="button">전송</button>
+            </div>
+            <div class="register_code_wrap">
+                <div class="register_code">
+                    <input type="text" id="code" placeholder="유효 코드 입력">
+                    <button id="resend" type="button">재전송</button>
+                    <p class="timer">00:00</p>
+                </div>
+                <div class="register_code_button">
+                    <input type="button" id="codeComfirm" value="인증 확인">
+                </div>
+            </div>
+            <form method="post" id="register_form" action="../../DataBase/registerAction">
+                <div class="register_name">
+                    <input type="text" id="username" name="userName" placeholder="본인 이름">
+                </div>
+                <div class="register_student_id">
+                    <input type="text" id="studentId" name="studentId" placeholder="본인 학번">
+                </div>
+                <div class="register_gender">
+                    <input type="button" id="male" name="gender" value="남자">
+                    <input type="button" id="female" name="gender" value="여자">
+                </div>
+                <div class="register_pw">
+                    <input type="password" id="password" name="password" placeholder="비밀번호">
+                </div>
+                <div class="submit">
+                    <input type="submit" id="registerComfirm" value="가입">
+                </div>
+            </form>
+            <div class="popup">
+                <h2>감사합니다 !</h2>
+                <p>회원가입이 완료되었습니다.</p>
+                <button id="confirm" type="button">확인</button>
+            </div>
+        </div>
+    </div>
+    <script src="./registerScript.js" type="module" ></script>
+</body>
+</html>

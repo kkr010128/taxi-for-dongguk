@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>같이 가요 - 합승 등록하기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main_pageStyle.css">
+    <link rel="stylesheet" href="http://택시.com/nav_neumorph/nav_neumorph.css">
+</head>
+<body>
+    <div class="wrap">
+    <div class="setLocation">
+        <div class="lines">
+            <div id="line1">
+                <form action="#" id="selecter1">
+                    <label id="start" for="start">출발지</label>
+                    <select name="start_location" id="setStart">
+                        <option disabled selected>출발지 선택하기</option>
+                        <option>[동국대] 택시정류장</option>
+                        <option>[동국대] 기숙사</option>
+                        <option>[석장동] 택시정류장</option>
+                        <option>[경주시] 연합기숙사</option>
+                        <option>[경주시] 예비군 훈련장</option>
+                        <option>[경주시] 시외버스터미널</option>
+                        <option>[신경주역] 택시정류장</option>
+                        <option>[황리단길] 첨성대,대릉원주차장</option>
+                        <option>[황리단길] 경주공고</option>
+                        <option>[황리단길] 중앙광장,공영주차장</option>
+                    </select>
+                </form>
+            </div>
+            <div id="line2">
+                <form action="#" id="selecter2">
+                    <label id="arrive" for="arrive">도착지</label>
+                    <select name="arrive_location" id="setArrive">
+                        <option disabled selected>목적지 선택하기</option>
+                        <option>[동국대] 택시정류장</option>
+                        <option>[동국대] 기숙사</option>
+                        <option>[석장동] 택시정류장</option>
+                        <option>[경주시] 연합기숙사</option>
+                        <option>[경주시] 예비군 훈련장</option>
+                        <option>[경주시] 시외버스터미널</option>
+                        <option>[신경주역] 택시정류장</option>
+                        <option>[황리단길] 첨성대,대릉원주차장</option>
+                        <option>[황리단길] 경주공고</option>
+                        <option>[황리단길] 중앙광장,공영주차장</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <div id="btnBox">    
+            <button type="button" id="changeBtn">
+                <img src="http://택시.com/assets/main/switch_path.png" id="change" >
+            </button>
+        </div>
+    </div>
+    <div class="mapBox">
+        <div class="map" id="map"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7bf82169a53be4c855eca8f52959e97e&libraries=services,clusterer,drawing?autoload=false"></script>
+        <script type="text/javascript">
+           var container = document.getElementById("map"),
+            options = {
+                center: new kakao.maps.LatLng(35.862192, 129.195048),
+                level: 3
+            };
+            var map = new kakao.maps.Map(container, options);
+
+        </script>
+    </div>
+        <div class="options">
+            <div id="q3">
+                <h3 id="Questions">출발 시간</h3>
+                <div class="time_picker">
+                   <input id="setDate" type="date" name="">
+                    <form action="#" id="time">
+                        <!--<label id="time_label" for="time">시간</label>-->
+                        <select name="timePicker" id="setTime">
+                            <script>
+                                selecter = document.getElementById("setTime");
+                                for(let i=1; i<=24; i++){
+                                    x = document.createElement("option");
+                                    x.innerText = i.toString();
+                                    selecter.appendChild(x);
+                                }
+                            </script>
+                        </select>
+                    </form>
+                    <div>
+                        <p>&nbsp;:&nbsp;</p>
+                    </div>
+                    <form action="#" id="minute">
+                        <!--<label id="time_label" for="time">시간</label>-->
+                        <select name="minutePicker" id="setMinute">
+                            <script>
+                                selecter = document.getElementById("setMinute");
+                                for(let i=0; i<=60; i++){
+                                    x = document.createElement("option");
+                                    if(i%15==0){
+                                        x.innerText = i.toString();
+                                        selecter.appendChild(x);
+                                    }
+                                }
+                            </script>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div id="q1">
+                <h3 id="Questions">같은 성별끼리 합승하기</h3>
+                <div class="sex_switch">
+                    <input type="checkbox" id="switch1">
+                    <label for="switch1" class="switch_label1">
+                    <span class="onf_btn1"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="q4">
+                <h3 id="Questions" >짐이 많아요(캐리어 등)</h3>
+                <div class="bag_switch">
+                    <input type="checkbox" id="switch2">
+                    <label for="switch2" class="switch_label2">
+                    <span class="onf_btn2"></span>
+                    </label>
+                </div>
+            </div>
+            <div id="q2">
+                <h3 id="Questions">최대 인원수</h3>
+                <div class="personCount">
+                    <button id="minus">-</button>
+                    <span id="maxPerson">3</span>
+                    <button id="plus">+</button>
+                </div>
+            </div> 
+            <div class="priceTab">
+                <p id="showPrice">예상되는 개인당 금액은 ~원이에요 !</p>
+            </div>
+                <div class="buttons">
+                    <button id="cancelBtn">초기화</button>
+                    <button id="setBtn">매칭시작</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="match_popup" id="match_failure_popup">
+        <div class="match_popup_wrap">
+            <p></p>
+        </div>
+        <div class="match_popup_wrap">
+            <div class="match_popup_wrap">
+                <button id="create_button" type="button">YES</button>
+            </div>
+            <div class="match_popup_wrap">
+                <button id="create_button" type="button">NO</button>
+            </div>
+        </div>
+    </div>
+    <div class="match_popup" id="match_popup">
+        <div class="match_popup_wrap">
+            <p></p>
+        </div>
+        <div class="match_popup_wrap">
+            <button id="match_popup_button" type="button" style="width: 25%; height: 50%;">확인</button>
+        </div>
+    </div>
+    <script src="./main_pageScript.js"></script>
+    <script src="http://택시.com/nav_neumorph/nav_neumorph.js"></script>
+</body>
+</html>

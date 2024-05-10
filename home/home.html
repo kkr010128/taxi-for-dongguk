@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>홈 화면</title>
+    <!-- <link rel="stylesheet" href="../lower_bar/lower_barStyle.css" /> -->
+
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="http://택시.com/nav_neumorph/nav_neumorph.css">
+  </head>
+
+  <!---2023년 11월 25일 최신-->
+  <body>
+    <div class="wrap">
+      <div class="wrap1">
+        <div class="main_title">
+          <p>같이, 동행</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap_t">
+      <div class="wrap2">
+
+        <!--온도-->
+        <div class="user_degree" onclick="">
+          <div class="degree-textContainer">
+            <div class="degree-comment">
+              <div class="degree-title">당신의 온도</div>
+              <div id="degree-value"></div>
+            </div>
+          </div>
+          <div class="bg">
+            <div class="innerCircle">
+              <!--숫자 띠리링 변하게 만들거-->
+              <p id="temperature"></p>
+              <span class="pg_v"></span>
+            </div>
+          </div>
+        </div>
+
+        <!--일정-->
+        <div class="user_schedule" onclick="">
+          <div class="schedule-comment">
+            <div class="schedule-title">다가오는 약속</div>
+            <div id="schedule-text"></div>
+          </div>
+        </div>        
+
+        <!--이용내역-->
+        <div class="user_log" id="user_log" onclick="open_log()">
+          <div class="log-comment">
+            <div class="log-title">최근 이용내역</div>
+            <div id="log-text">완료된 일정을 보여드릴게요.</div>
+          </div>
+        </div>
+      </div>
+      <div class="sliding_drawer">
+        <div class="drawer drawer_close">
+              <h2 id="reviewTitle">유저 리뷰하기</h2>
+              <div class="drawer_lines">
+                <p id="user1">username1</p>
+                <p id="user_num1">student_num1</p>
+                <div class="ratingbar">
+                  <div id="rating-stars1" class="rating-stars col s12">
+                    <form name="review2">
+                    <input type="radio" name="stars-null" id="star-null" />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-1"
+                      saving="1"
+                      data-start="1"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-2"
+                      saving="2"
+                      data-start="2"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-3"
+                      saving="3"
+                      data-start="3"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-4"
+                      saving="4"
+                      data-start="4"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-5"
+                      saving="5"
+                      checked=""
+                    />
+                    <section>
+                      <label for="star-1">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-2">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-3">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-4">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-5">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                    </section>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <div class="drawer_lines">
+                <p id="user2">username2</p>
+                <p id="user_num2">student_num2</p>
+                <div class="ratingbar">
+                  <div id="rating-stars2" class="rating-stars col s12">
+                    <form name="review2">
+                    <input type="radio" name="stars-null" id="star-null" />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-6"
+                      saving="6"
+                      data-start="6"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-7"
+                      saving="7"
+                      data-start="7"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-8"
+                      saving="8"
+                      data-start="8"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-9"
+                      saving="9"
+                      data-start="9"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-10"
+                      saving="10"
+                      checked=""
+                    />
+                    <section>
+                      <label for="star-6">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-7">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-8">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-9">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-10">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                    </section>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <div class="drawer_lines">
+                <p id="user3">username3</p>
+                <p id="user_num3">student_num3</p>
+                <div class="ratingbar">
+                  <div id="rating-stars3" class="rating-stars col s12">
+                    <form name="review2">
+                    <input type="radio" name="stars-null" id="star-null" />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-11"
+                      saving="11"
+                      data-start="11"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-12"
+                      saving="12"
+                      data-start="12"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-13"
+                      saving="13"
+                      data-start="13"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-14"
+                      saving="14"
+                      data-start="14"
+                      checked=""
+                    />
+                    <input
+                      type="radio"
+                      name="stars"
+                      id="star-15"
+                      saving="15"
+                      checked=""
+                    />
+                    <section>
+                      <label for="star-11">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-12">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-13">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-14">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                      <label for="star-15">
+                        <svg width="255" height="240" viewBox="0 0 51 48">
+                          <path
+                            d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                          ></path>
+                        </svg>
+                      </label>
+                    </section>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button id="reviewBtn" type="button">
+                    리뷰달기
+                </button>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--하단 바-->
+    <!-- <script src="../lower_bar/lower_barScript.js"></script> -->
+
+    <script src="./home.js"></script>
+    <script src="http://택시.com/nav_neumorph/nav_neumorph.js"></script>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동행: 같이타요</title>
+    <link rel="stylesheet" href="./setting_page.css">
+    <link rel="stylesheet" href="http://택시.com/nav_neumorph/nav_neumorph.css">
+</head>
+<body>
+   <div class="wrap_main">
+            <div class="user_info">
+                <img src="https://media.discordapp.net/attachments/1175362452469321748/1175362842745126942/default_profile.png?ex=656af4f2&is=65587ff2&hm=d465bd22c24a98efce6a2070accaee98a6534855c79f64df0bbbad3aad0eedcc&=&width=976&height=976" width="40%">
+                <div class="user_info_inner">
+                    <p>학번 이름</p>
+                </div>
+            </div>
+            <div class="wrap1">
+                <div class="wrap_ex">
+                    <div id="handle1" class="setting_detail1"  onclick="event.stopPropagation()">
+                        <p>프로필 수정</p>
+                        <div class="sliding_drawer">
+                            <div id="drawer1" onclick="event.stopPropagation()" class="drawer_close drawer">
+                                <div class="dragTest" draggable="true">
+                                    <hr draggable="true">
+                                </div>
+                                <div class="drawer1">
+                                    <div class="dragTest" draggable="true">
+                                        <hr draggable="true">
+                                    </div>
+                                    <p>프로필 이미지 변경</p>
+                                    <form>
+                                    <input type="file" id="imageUpload" accept="image/*">
+                                    <button type="submit">업로드</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting_detail1_image">
+                            <img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%">
+                        </div>
+                    </div>
+                    <div id="handle2" class="setting_detail1"  onclick="event.stopPropagation()">
+                        <p>비밀번호 변경</p>
+                        <div class="sliding_drawer">
+                            <div id="drawer2" onclick="event.stopPropagation()" class="drawer_close drawer">
+                                <div class="dragTest" draggable="true">
+                                    <hr draggable="true">
+                                </div>
+                                <div class="drawer2">
+                                    <p>비밀번호 변경 드로어</p>
+                                    <form>
+                                    
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting_detail1_image">
+                            <img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div id="handle3" class="setting_detail1" onclick="event.stopPropagation()" >
+                    <p>즐겨찾기 관리<img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%"></p>
+                    <div class="sliding_drawer">
+                        <div id="drawer3" onclick="event.stopPropagation()" class="drawer_close drawer">
+                            <div class="dragTest" draggable="true">
+                                <hr draggable="true">
+                            </div>
+                            <div class="drawer3">
+                                <p>즐겨찾기 드로어</p>
+                                <form>
+                                <input type="file" id="imageUpload" accept="image/*">
+                                <button type="submit">업로드</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="wrap2">
+                <div class="wrap_ex">
+                    <div id="handle4" onclick="event.stopPropagation()" class="setting_detail1" >
+                        <p>고객센터</p>
+                        <div class="sliding_drawer">
+                            <div id="drawer4" onclick="event.stopPropagation()" class="drawer_close drawer">
+                                <div class="dragTest" draggable="true">
+                                </div>
+                                <div class="drawer4">
+                                    <hr draggable="true">
+                                    <form class="contact-form">
+                                        <div class="name">
+                                          <label for="name">제목: </label>
+                                          <input type="text" id="contact_name" />
+                                        </div>  
+                                        <div class="email">
+                                          <label for="email">email: </label>
+                                          <input type="text" id="contact_email" />
+                                        </div>
+                                        <div class="message">
+                                          <label for="message">내용: </label>
+                                          <textarea name="message" id="contact_message" placeholder="반드시 내용을 작성하시오" required></textarea>
+                                        </div>
+                                        <div class="submit">
+                                          <p class="user-message">빠른 시일 내 관리자가 확인 후 회신 드리겠습니다.</p>
+                                          <input type="button" id="send" value="Send" class="button" />
+                                        </div>
+                                      </form>
+                                      <p class="credit">기타 문의: <a href="" target="_blank">kkr010128@icloud.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting_detail1_image">
+                            <img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%">
+                        </div>
+                    </div>
+                    <div class="setting_detail1 policy">
+                        <p>정책 및 규정<img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%"></p>
+                    </div>
+                    <div class="setting_detail1 dev_info">
+                        <p id="devinfo" onclick="redirectDevInfo()">개발자 정보<img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%"></p>
+                    </div>
+                    <div id="handle5" onclick="event.stopPropagation()" class="setting_detail1"  >
+                        <p>서비스 탈퇴</p>
+                        <div class="sliding_drawer">
+                            <div id="drawer5" onclick="event.stopPropagation()" class="drawer_close drawer">
+                                <div class="dragTest" draggable="true">
+                                    <hr draggable="true">
+                                </div>
+                                <div class="drawer5">
+                                    <p>진짜 서비스 탈퇴해?</p>
+                                    <form>
+                                    <input type="file" id="imageUpload" accept="image/*">
+                                    <button type="submit">업로드</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting_detail1_image">
+                            <img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%">
+                        </div>
+                    </div>
+                    <div id="login_out" onclick="logOut()" class="setting_detail1">
+                        <p>로그아웃<img src="http://택시.com/assets/main/setting_page/arrow_right.png" width="20em" height="20em" align="right" hspace="10%"></p>
+                    </div>
+                </div>
+            </div> 
+    </div>
+    <script src="./setting_page.js"></script>
+    <script src="http://택시.com/nav_neumorph/nav_neumorph.js"></script>
+    <!--<script src="../../nav_neumorph/nav_neumorph.js"></script>-->
+</body>
+</html>
+

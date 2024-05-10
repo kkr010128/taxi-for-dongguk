@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>동행: 같이타요</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="login">
+            <h2>로그인</h2>
+            <div class="login_margin">
+            </div>
+            <form method="post" id="login_form" action="../../DataBase/login">
+				<div class="login_id">
+	                <input type="text" name="userId" placeholder="본인 학번">
+	                <p id="tooltip">아이디는 본인 학번을 입력해주세요.</p>
+            	</div>
+            	<div class="login_pw">
+                <input type="password" name="password" id="password" placeholder="비밀번호">
+            	</div>
+            	<div class="login_etc">
+	                <div class="checkbox">
+	                	<input onclick="isChecked()" type="checkbox" id="checkBox"> 로그인 정보 기억
+	                </div>
+	                <div>
+	                	<a class="new_member" onclick=gotoSignUp();>처음이신가요?</a>
+                	</div>
+            	</div>
+            	<div class="submit">
+               	 	<input id="loginBtn" type="submit" value="로그인">
+            	</div>
+			</form>
+			<div class="login_popup">
+                <h2>로그인 실패</h2>
+                <p>아이디 혹은 비밀번호가 일치하지 않습니다.</p>
+                <button id="confirm" type="button">확인</button>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

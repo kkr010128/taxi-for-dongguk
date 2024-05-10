@@ -1,0 +1,55 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #e8e4df; /* 전체 배경색 변경 */
+  
+}
+.chat h1::after{
+  content: '';
+  display: block;
+  width: 500px; /* 줄 라인의 길이 조절 */
+  height: 3px; /* 줄 라인의 높이 조절 */
+  background-color: #e0ceb2; /* 줄 라인의 색상 설정 */
+  margin: 10px auto; /* 줄 라인의 상하 여백 조절 */
+  border-radius: 3px; /* 줄 라인 끝 부분을 둥글게 만들기 */
+
+}
+.chat-room-list {
+  max-width: 500px;
+  height: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0ceb2; /* 테두리 색 변경 */
+  border-radius: 10px;
+  background-color: #ffffff; /* 전체 배경색 변경 */
+  box-shadow: 0px 0px 15px 0px #b3b3b3; /* 그림자 효과 추가 */
+}
+
+.chat-room {
+  margin-bottom: 23px;
+  padding: 20px;
+  border: 2px solid #e0ceb2;
+  border-radius: 10px;
+  background-color: #f8f3ed; /* 기본 배경색 변경 */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-room:hover {
+  background-color: #b68b48; /* 호버 시 배경색 변경 */
+}
+
+.chat-room h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #424242;
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.chat h1 {
+  text-align: center; /* 텍스트 중앙 정렬 */
+  color: #424242;
+  font-size: 32px;
+  margin-bottom: 35px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* 텍스트 그림자 효과 추가 */
+}

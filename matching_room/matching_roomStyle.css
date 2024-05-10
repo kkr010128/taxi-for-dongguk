@@ -1,0 +1,285 @@
+@font-face {
+    src: url("../assets/font/NanumFont/NanumGothic/NanumFontSetup_OTF_GOTHIC/NanumGothicBold.otf");
+    font-family: "NanumGothic";
+}
+* {
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+p {
+	font-family: "NanumGothic";
+	font-size: 15px;
+}
+
+.matching_room_check_wrap {
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(248, 243, 237);
+}
+.matching_check {
+	position: relative;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(248, 243, 237);
+	top: 3.5em;
+}
+
+.matching_check p {
+	font-family: "NanumGothic";
+	font-size: 20px;
+}
+
+.matching_room_myroom {
+	position: relative;
+    width: 80%;
+	height: 100%;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 3.5em;
+	border: 1px solid lightgray;
+	box-shadow: 0px 2px 9px rgb(171, 171, 171);
+}
+
+.wrap {
+    width: 100%;
+	height: 90vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	/* background: url("../assets/img.png") no-repeat; */
+}
+
+.matching_previous_room {
+    width: 20%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.matching_current_room {
+    width: 60%;
+	height: 60%;
+	display: none;
+	align-items: center;
+    border: 2px solid lightgray;
+	flex-direction: column;
+	border-radius: 16px;
+	background-color: #f8f3ed;
+	box-shadow: 0px 2px 9px rgb(171, 171, 171);
+}
+
+.matching_current_room_none {
+    width: 60%;
+	height: 60%;
+	display: none;
+	align-items: center;
+    border: 2px solid lightgray;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 16px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 2px 9px rgb(171, 171, 171);
+}
+
+.matching_next_room {
+    width: 20%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.matching_room_div {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f8f3ed;
+
+}
+
+.matching_room_div h1{
+	font-size: 20px;
+}
+
+.matching_room_gender {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.matching_room_button {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.matching_room_button button{
+	border: 1px solid lightgray;
+	border-radius: 16px;
+	background-color: rgb(236, 236, 236);
+	font-family: "NanumGothic";
+	font-size: 13px;
+}
+
+.matching_room_sign {
+	width: 33%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendar_wrap {
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(248, 243, 237);
+	position: static;
+}
+
+.calendar {
+	width: 90%;
+	height: 65%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 16px;
+	background-color: rgb(248, 243, 237);
+	box-shadow: 0px 2px 9px rgb(171, 171, 171);
+}
+
+.calendar_head {
+	width: 100%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar_previous {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar_now {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar_next {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.day_wrap {
+	width: 100%;
+	height: 10%;
+	display: flex;
+}
+
+.day {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.day p {
+	color: #424242;
+}
+
+.date_wrap {
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	display: flex;
+}
+.date_week {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.date {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.matching_room_popup {
+	width: 12em;
+	height: 10em;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%) scale(1);
+	background-color: white;
+	padding: 0px 20px 0px;
+	box-shadow: 0px 2px 9px rgb(171, 171, 171);
+	flex-direction: column;
+	display: none;
+	border-radius: 12px;
+}
+.matching_room_popup_wrap {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.matching_room_popup_wrap button {
+	width: 50%;
+	height: 100%;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+	background: #d3d3d3;
+	color: rgb(110, 110, 110);
+	font-size: 1em;
+	letter-spacing: 2px;
+	background: #f8f3ed;
+	box-shadow: 3px 3px 6px #cbc7c2,  -3px -3px 6px #ffffff;
+}
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(360deg);
+    }
+}
+
+.rotating-image {
+  animation: rotate_image 6s linear infinite; 
+  transform-origin: 50% 50%;
+}

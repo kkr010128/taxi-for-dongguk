@@ -1,0 +1,374 @@
+@font-face {
+  font-family: NaNumGothic;
+  src: url("./assets/font/NanumGothic.otf") format("NanumGothic");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+p {
+  display: block;
+  margin-top: 3%;
+}
+
+.wrap {
+  width: 100%;
+  height: 38vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: static;
+  background-color: rgb(248, 243, 237);
+}
+
+.main_title {
+  position: relative;
+  left: 10%;
+  top: 15%;
+  font-size: 200%;
+  font-style: bold;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.wrap1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 194, 85);
+  border-radius: 12px;
+  bottom: 10%;
+  font-size: 0.7em;
+}
+
+.wrap_t {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(248, 243, 237);
+}
+.wrap2 {
+  position: relative;
+  width: 95%;
+  height: 100%;
+  border-radius: 16px;
+  bottom: 23%;
+  background-color: rgb(248, 243, 237);
+  box-shadow: 0px 2px 9px rgb(171, 171, 171);
+  padding: 3%;
+}
+
+.user_schedule,
+.user_log,
+.user_degree {
+  width: 100%;
+  height: 20%;
+  border-radius: 16px;
+  display: flex;
+  margin-bottom: 10px;
+  background: rgb(248, 243, 237);
+  box-shadow: 2px 2px 3px #cbc7c2, -2px -2px 3px #ffffff;
+  transition: 0.7s; /* 애니메이션 그냥 함 신기해서 넣어봣음.. */
+}
+.user_schedule {
+  flex-direction: column;
+}
+.user_log {
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.degree-textContainer {
+  flex-direction: column;
+  width: 100%;
+}
+
+.degree-title,
+.schedule-title,
+.log-title {
+  font-size: 1.1em;
+}
+
+.schedule-comment,
+.log-comment {
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+#schedule-text {
+  margin-top: 4%;
+}
+
+#schedule-text,
+#log-text {
+  margin-top: 8%;
+  font-size: 0.8em;
+}
+
+.degree-comment {
+  margin-top: 8%;
+}
+
+.degree-title {
+  margin-left: 15%;
+}
+
+#degree-value {
+  margin-left: 6%;
+  margin-top: 10%;
+  line-height: 40px;
+  border: 0.01em solid rgb(255, 255, 255);
+  box-shadow: inset 2px 2px 3px #cbc7c2, inset -2px -2px 3px #ffffff;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 15px;
+  width: 90%;
+  height: 40px;
+}
+
+.bg,
+.innerCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  border-radius: 14px;
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.innerCircle {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  position: relative;
+  background: conic-gradient(
+    rgb(255, 194, 85) 120deg,
+    rgb(248, 243, 237) 125deg
+  );
+  box-shadow: inset 1px 1px 2px #cbc7c2, inset -1px -1px 2px #ffffff;
+  margin-right: 10%;
+}
+
+.innerCircle::before {
+  content: "";
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  position: absolute;
+  /* background: radial-gradient(circle, transparent 50%,rgba(171, 171, 171, 0.7)); */
+  background: rgb(248, 243, 237);
+  box-shadow: 1px 1px 2px #cbc7c2, -1px -1px 2px #ffffff;
+}
+
+#temperature {
+  font-size: 20px;
+  z-index: 1;
+  margin-bottom: 7%;
+}
+
+#schedule-text {
+  border: 0.01em solid rgb(225, 222, 222);
+  box-shadow: inset 1px 1px 2px #cbc7c2, inset -1px -1px 2px #ffffff;
+  border-radius: 14px;
+  width: 88%;
+  height: 60px;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+#reviewTitle{
+  text-align: center;
+}
+
+.drawer{
+    position: fixed;
+    top : 10%;
+    right : 5%;
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    background: rgb(248, 243, 237);
+    transition: transform 0.7s ease-in-out;
+    box-shadow:  3px 3px 6px #cbc7c2, -3px -3px 6px #ffffff;
+    color : #111111;
+    border: solid 3px rgb(255, 194, 85);
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.drawer_close{
+  transform: translateY(120%); /*나중에 120%*/
+}
+
+.drawer_open{
+  transform: translateY(0); 
+}
+
+.drawer_lines{
+  display: none;
+  justify-content: space-between;
+}
+
+.ratingbar {
+  display: flex;
+  justify-content: center;
+  direction: flex;
+  border: 0;
+  width: 45%;
+}
+
+.rating-stars input {
+  margin-top: 1rem;
+  display: none;
+}
+.rating-stars #star-1:checked ~ section [for="star-1"] svg,
+.rating-stars #star-2:checked ~ section [for="star-1"] svg,
+.rating-stars #star-2:checked ~ section [for="star-2"] svg,
+.rating-stars #star-3:checked ~ section [for="star-1"] svg,
+.rating-stars #star-3:checked ~ section [for="star-2"] svg,
+.rating-stars #star-3:checked ~ section [for="star-3"] svg,
+.rating-stars #star-4:checked ~ section [for="star-1"] svg,
+.rating-stars #star-4:checked ~ section [for="star-2"] svg,
+.rating-stars #star-4:checked ~ section [for="star-3"] svg,
+.rating-stars #star-4:checked ~ section [for="star-4"] svg,
+.rating-stars #star-5:checked ~ section [for="star-1"] svg,
+.rating-stars #star-5:checked ~ section [for="star-2"] svg,
+.rating-stars #star-5:checked ~ section [for="star-3"] svg,
+.rating-stars #star-5:checked ~ section [for="star-4"] svg,
+.rating-stars #star-5:checked ~ section [for="star-5"] svg,
+.rating-stars #star-6:checked ~ section [for="star-6"] svg,
+.rating-stars #star-7:checked ~ section [for="star-6"] svg,
+.rating-stars #star-7:checked ~ section [for="star-7"] svg,
+.rating-stars #star-8:checked ~ section [for="star-6"] svg,
+.rating-stars #star-8:checked ~ section [for="star-7"] svg,
+.rating-stars #star-8:checked ~ section [for="star-8"] svg,
+.rating-stars #star-9:checked ~ section [for="star-6"] svg,
+.rating-stars #star-9:checked ~ section [for="star-7"] svg,
+.rating-stars #star-9:checked ~ section [for="star-8"] svg,
+.rating-stars #star-9:checked ~ section [for="star-9"] svg,
+.rating-stars #star-10:checked ~ section [for="star-6"] svg,
+.rating-stars #star-10:checked ~ section [for="star-7"] svg,
+.rating-stars #star-10:checked ~ section [for="star-8"] svg,
+.rating-stars #star-10:checked ~ section [for="star-9"] svg,
+.rating-stars #star-10:checked ~ section [for="star-10"] svg,
+.rating-stars #star-11:checked ~ section [for="star-11"] svg,
+.rating-stars #star-12:checked ~ section [for="star-11"] svg,
+.rating-stars #star-12:checked ~ section [for="star-12"] svg,
+.rating-stars #star-13:checked ~ section [for="star-11"] svg,
+.rating-stars #star-13:checked ~ section [for="star-12"] svg,
+.rating-stars #star-13:checked ~ section [for="star-13"] svg,
+.rating-stars #star-14:checked ~ section [for="star-11"] svg,
+.rating-stars #star-14:checked ~ section [for="star-12"] svg,
+.rating-stars #star-14:checked ~ section [for="star-13"] svg,
+.rating-stars #star-14:checked ~ section [for="star-14"] svg,
+.rating-stars #star-15:checked ~ section [for="star-11"] svg,
+.rating-stars #star-15:checked ~ section [for="star-12"] svg,
+.rating-stars #star-15:checked ~ section [for="star-13"] svg,
+.rating-stars #star-15:checked ~ section [for="star-14"] svg,
+.rating-stars #star-15:checked ~ section [for="star-15"] svg{
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.rating-stars #star-1:checked ~ section [for="star-1"] svg path,
+.rating-stars #star-2:checked ~ section [for="star-1"] svg path,
+.rating-stars #star-2:checked ~ section [for="star-2"] svg path,
+.rating-stars #star-3:checked ~ section [for="star-1"] svg path,
+.rating-stars #star-3:checked ~ section [for="star-2"] svg path,
+.rating-stars #star-3:checked ~ section [for="star-3"] svg path,
+.rating-stars #star-4:checked ~ section [for="star-1"] svg path,
+.rating-stars #star-4:checked ~ section [for="star-2"] svg path,
+.rating-stars #star-4:checked ~ section [for="star-3"] svg path,
+.rating-stars #star-4:checked ~ section [for="star-4"] svg path,
+.rating-stars #star-5:checked ~ section [for="star-1"] svg path,
+.rating-stars #star-5:checked ~ section [for="star-2"] svg path,
+.rating-stars #star-5:checked ~ section [for="star-3"] svg path,
+.rating-stars #star-5:checked ~ section [for="star-4"] svg path,
+.rating-stars #star-5:checked ~ section [for="star-5"] svg path,
+.rating-stars #star-6:checked ~ section [for="star-6"] svg path,
+.rating-stars #star-7:checked ~ section [for="star-6"] svg path,
+.rating-stars #star-7:checked ~ section [for="star-7"] svg path,
+.rating-stars #star-8:checked ~ section [for="star-6"] svg path,
+.rating-stars #star-8:checked ~ section [for="star-7"] svg path,
+.rating-stars #star-8:checked ~ section [for="star-8"] svg path,
+.rating-stars #star-9:checked ~ section [for="star-6"] svg path,
+.rating-stars #star-9:checked ~ section [for="star-7"] svg path,
+.rating-stars #star-9:checked ~ section [for="star-8"] svg path,
+.rating-stars #star-9:checked ~ section [for="star-9"] svg path,
+.rating-stars #star-10:checked ~ section [for="star-6"] svg path,
+.rating-stars #star-10:checked ~ section [for="star-7"] svg path,
+.rating-stars #star-10:checked ~ section [for="star-8"] svg path,
+.rating-stars #star-10:checked ~ section [for="star-9"] svg path,
+.rating-stars #star-10:checked ~ section [for="star-10"] svg path,
+.rating-stars #star-11:checked ~ section [for="star-11"] svg path,
+.rating-stars #star-12:checked ~ section [for="star-11"] svg path,
+.rating-stars #star-12:checked ~ section [for="star-12"] svg path,
+.rating-stars #star-13:checked ~ section [for="star-11"] svg path,
+.rating-stars #star-13:checked ~ section [for="star-12"] svg path,
+.rating-stars #star-13:checked ~ section [for="star-13"] svg path,
+.rating-stars #star-14:checked ~ section [for="star-11"] svg path,
+.rating-stars #star-14:checked ~ section [for="star-12"] svg path,
+.rating-stars #star-14:checked ~ section [for="star-13"] svg path,
+.rating-stars #star-14:checked ~ section [for="star-14"] svg path,
+.rating-stars #star-15:checked ~ section [for="star-11"] svg path,
+.rating-stars #star-15:checked ~ section [for="star-12"] svg path,
+.rating-stars #star-15:checked ~ section [for="star-13"] svg path,
+.rating-stars #star-15:checked ~ section [for="star-14"] svg path,
+.rating-stars #star-15:checked ~ section [for="star-15"] svg path {
+  fill: #fffc0a;
+  stroke: #000000;
+}
+
+#rating-stars1 section label, #rating-stars2 section label, #rating-stars3 section label{
+  display: inline-block;
+  width: 12%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#rating-stars1 section label svg, #rating-stars2 section label svg, #rating-stars3 section label svg {
+  width: 100%;
+  height: auto;
+  fill: #f5f5f5;
+  stroke: #444;
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -moz-transition: -webkit-transform 200ms ease-in-out;
+  -o-transition: -webkit-transform 200ms ease-in-out;
+  -ms-transition: -webkit-transform 200ms ease-in-out;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+}
+
+.rating-stars{
+  display: inline-block;
+  width: 100%;
+  height: 22px;
+  position: relative;
+  text-align: center;
+  margin-top: 12px;
+}
+

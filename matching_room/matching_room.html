@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동행: 같이타요</title>
+    <link rel="stylesheet" href="./matching_roomStyle.css">
+    <link rel="stylesheet" href="http://택시.com/nav_neumorph/nav_neumorph.css">
+</head>
+<body>
+    <div class="matching_room_check_wrap">
+    </div>
+   <div class="wrap" >
+        <div class="matching_previous_room">
+            <img src="http://택시.com/assets/main/room_list/reverse_arrow.png" width="50%" height="35vh">
+        </div>
+        <div class="matching_current_room_none">
+            <p></p>
+        </div>
+        <div class="matching_current_room">
+            <div class="matching_room_div">
+                <h1></h1>
+            </div>
+            <div class="matching_room_div">
+                <p></p>
+            </div>
+            <div class="matching_room_div">
+                <p></p>
+            </div>
+            <div class="matching_room_div">
+                <img src="http://택시.com/assets/main/room_list/down_arrow.png" width="40em" height="40em">
+            </div>
+            <div class="matching_room_div">
+                <p></p>
+            </div>
+            <div class="matching_room_div">
+                <img>
+            </div>
+            <div class="matching_room_div">
+            </div>
+            <div class="matching_room_button">
+                <button type="button" id="matchingRoomSign">신청</button>
+            </div>
+        </div>
+        <div class="matching_next_room">
+            <img src="http://택시.com/assets/main/room_list/arrow.png" width="50%" height="35vh">
+        </div>
+   </div>
+   <div class="calendar_wrap">
+        <div class="calendar"> 
+            <div class="calendar_head">
+                <div class="calendar_previous">
+                    <img src="http://택시.com/assets/main/room_list/reverse_arrow.png" width="30em" height="35em">
+                </div>
+                <div class="calendar_now">
+                </div>
+                <div class="calendar_next">
+                    <img src="http://택시.com/assets/main/room_list/arrow.png" width="30em" height="35em">
+                </div>
+            </div>
+            <div class="day_wrap">
+                <div class="day">
+                    <p style="color:RED">일</p>
+                </div>
+                <div class="day">
+                    <p>월</p>
+                </div>
+                <div class="day">
+                    <p>화</p>
+                </div>
+                <div class="day">
+                    <p>수</p>
+                </div>
+                <div class="day">
+                    <p>목</p>
+                </div>
+                <div class="day">
+                    <p>금</p>
+                </div>
+                <div class="day">
+                    <p style="color:red">토</p>
+                </div>
+                
+            </div>
+            <div class="date_wrap">
+            </div>
+        </div>
+   </div>
+   <div class="matching_room_popup" id="weight_popup">
+        <div class="matching_room_popup_wrap">
+            <p>짐(캐리어)가 있습니까 ?</p>
+        </div>
+        <div class="matching_room_popup_wrap">
+            <div class="matching_room_popup_wrap">
+                <button id="weight_button" type="button">YES</button>
+            </div>
+            <div class="matching_room_popup_wrap">
+                <button id="weight_button" type="button">NO</button>
+            </div>
+        </div>
+    </div>
+    <div class="matching_room_popup" id="sign_popup">
+        <div class="matching_room_popup_wrap">
+            <p></p>
+        </div>
+        <div class="matching_room_popup_wrap">
+            <button id="sign_popup_button" type="button" style="width: 25%; height: 50%;">확인</button>
+        </div>
+    </div>
+    <script src="./matching_roomScript.js" type="module"></script>
+    <script src="http://택시.com/nav_neumorph/nav_neumorph.js"></script>
+</div>
+</body>
+</html>

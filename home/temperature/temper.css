@@ -1,0 +1,44 @@
+* {
+  border: 1px solid #000000;
+  text-align: center;
+}
+body {
+  height: 97vh;
+}
+
+.user_info {
+  height: 90%;
+  background-color: antiquewhite;
+}
+.user {
+  display: flex;
+  height: fit-content;
+  background-color: aqua;
+}
+.user_name {
+  width: 20%;
+  background-color: aquamarine;
+}
+.user_id {
+  width: 35%;
+  background-color: brown;
+}
+.ratingbar {
+  direction: flex;
+  width: 45%;
+  background-color: blueviolet;
+}
+
+.btn_container {
+  display: flex;
+  height: 10%;
+  background-color: aquamarine;
+}
+.btn_submit {
+  width: 100%;
+  background-color: aliceblue;
+}
+.btn_cancel {
+  background-color: blueviolet;
+  width: 100%;
+}

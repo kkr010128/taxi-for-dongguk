@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+.main_form {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid red;
+    /* width: 375px;
+    height: 812px; */
+    z-index: 0;
+    margin: 0 auto;
+  }
+
+    .top_layout {
+        justify-content: center;
+        align-items: center;
+        border: 5px solid rgb(191, 0, 255);
+        z-index: 1;
+        width: 100vw;
+        height: 15vh;
+        margin: 0vw 3vw;
+        display: flex;
+    }
+        .finder_form {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 310px;
+            height: 45px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.25);
+        }
+            .finder_switch {
+                margin: auto;
+                margin-top: 3px;
+            }
+            .start_point { 
+                margin: auto;
+            }
+            .middle_arrow {
+                margin: auto;
+            }
+            .goal_point {
+                margin: auto;
+            }
+            .finder_options {
+                margin: auto;
+                margin-top: 3px;
+            }
+        .search_button{
+            background-color: #FFA800;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;            
+        }
+
+    .middle_layout {
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(0, 235, 31);
+    z-index: 0;
+    width: 97vw;
+    height: 63vh;
+    margin: 0vw 3vw;
+    }
+
+    .bottom_layout {
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(0, 51, 255);
+    z-index: 1;
+    width: 97vw;
+    height: 15vh;
+    margin: 0vw 3vw;
+    display: flex;
+    }
+        .blank_bottom{
+            width: 85%;
+            height: 50%;
+            border: 5px solid rgb(63, 81, 155);
+        }
+        .chat_button{
+            width: 15%;
+            height: 50%;
+            border: 5px solid rgb(17, 44, 150);
+        }
+
+
+    #dropdown{
+        background: rgb(255,49,49);
+        background: -moz-linear-gradient(262deg, rgba(255,49,49,1) 11%, rgba(84,0,255,1) 100%);
+        background: -webkit-linear-gradient(262deg, rgba(255,49,49,1) 11%, rgba(84,0,255,1) 100%);
+        background: linear-gradient(262deg, rgba(255,49,49,1) 11%, rgba(84,0,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff3131",endColorstr="#5400ff",GradientType=1);
+        color: #ffffff;
+    }
